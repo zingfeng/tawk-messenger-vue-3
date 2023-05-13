@@ -39,6 +39,9 @@
     }
   },
   "scripts": {
+    "build-ts": "tsc --build tsconfig.build.json",
+    "dev": "tsc --build",
+    "clean": "tsc --build --clean",
     "build": "vite build",
     "test:unit": "vitest",
     "test:coverage": "vitest run --coverage",
