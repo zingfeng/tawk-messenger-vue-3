@@ -12,7 +12,7 @@ function loadScript({propertyId = '', widgetId = '', embedId = '', basePath = 't
 			document.body.appendChild(element);
 		}
 
-		window.Tawk_API.embedded = embedId;
+		window['Tawk_API'].embedded = embedId;
 	}
 
 	const script = document.createElement('script');
