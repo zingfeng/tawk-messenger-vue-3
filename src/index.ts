@@ -5,7 +5,10 @@ import TawkMessenger from './lib/index';
 import { isValidString } from './utils/helper';
 
 export default {
-	install: (app, options = {}) => {
+	install: (app: any, options: Partial<{
+		propertyId: string,
+		widgetId: string,
+	}> = {}) => {
 		if (!isValidString(options.propertyId)) {
 			console.error('[Tawk-messenger-vue warn]: You didn\'t specified \'propertyId\' property in the plugin.');
 			return;

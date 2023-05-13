@@ -1,7 +1,7 @@
 {
-  "name": "@tawk.to/tawk-messenger-vue-3",
+  "name": "tawk-messenger-vue-3-ts",
   "version": "1.0.1",
-  "description": "Official Vue 3 plugin for Tawk messenger",
+  "description": "Unofficial Vue 3 plugin for Tawk messenger (support Typescript)",
   "keywords": [
     "vuejs",
     "vue",
@@ -10,6 +10,7 @@
     "vue-plugin",
     "tawk",
     "nuxt-plugin",
+    "typescript",
     "tawkto",
     "vue-tawk",
     "vue3-tawk",
@@ -17,10 +18,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tawk/tawk-messenger-vue-3.git",
-    "repository": "tawk/tawk-messenger-vue-2"
+    "url": "git+https://github.com/zingfeng/tawk-messenger-vue-3.git"
   },
-  "homepage": "https://github.com/tawk/tawk-messenger-vue-3#readme",
+  "homepage": "https://github.com/zingfeng/tawk-messenger-vue-3#readme",
   "bugs": {
     "url": "https://github.com/tawk/tawk-messenger-vue-3/issues",
     "email": "support@tawk.to"
@@ -30,15 +30,11 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/tawk-messenger-vue-3.umd.js",
-  "module": "./dist/tawk-messenger-vue-3.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/tawk-messenger-vue-3.es.js",
-      "require": "./dist/tawk-messenger-vue-3.umd.js"
-    }
-  },
+  "main": "./dist/index.js",
   "scripts": {
+    "build-ts": "tsc --build tsconfig.build.json",
+    "dev": "tsc --build",
+    "clean": "tsc --build --clean",
     "build": "vite build",
     "test:unit": "vitest",
     "test:coverage": "vitest run --coverage",
